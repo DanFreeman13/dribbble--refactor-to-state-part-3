@@ -16,6 +16,11 @@
   margin-right: 5px;
 }
 
+.shots__list li a {
+  text-decoration: none;
+  color: #aaa;
+}
+
 .author{
   display: flex;
   flex-direction: row;

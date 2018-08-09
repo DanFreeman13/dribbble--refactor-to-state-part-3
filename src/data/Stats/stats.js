@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './stats.css'
 
+var theStyle ={};
+
 class Stats extends React.Component {
 
   constructor(props) {
@@ -15,16 +17,17 @@ class Stats extends React.Component {
   incrementLikes= (e) => {
     e.preventDefault();
 
-
     if(this.state.counterClicks === 0) {
       this.setState({
         likes: parseInt(this.state.likes)+1
       });
+      theStyle= {color: '#00a'};
       this.state.counterClicks++;
     } else {
       this.setState({
-        likes: parseInt(this.state.likes)-1
+        likes: parseInt(this.state.likes)-1,
       });
+      theStyle= {color: '#aaa'};
       this.state.counterClicks--;
     }
 
@@ -40,9 +43,9 @@ class Stats extends React.Component {
 
       <div className='shots__stats'>
         <ul className='shots__list'>
-          <li><i className='fa fa-eye' />{ this.props.v }</li>
+          <li style = { this.style }><i className='fa fa-eye' />{ this.props.v }</li>
           <li><i className='fa fa-comment' />{ this.props.c }</li>
-          <li><a href="#" onClick={ this.incrementLikes }><i className='fa fa-heart' />{ this.state.likes }</a></li>
+          <li><a href="#" onClick={ this.incrementLikes } style={ theStyle }><i className='fa fa-heart' />{ this.state.likes }</a></li>
         </ul>
         <div className="author"><img className="avatarImage" src={ this.props.av } />
           <a href="#" className="link">{ this.props.au }</a>
