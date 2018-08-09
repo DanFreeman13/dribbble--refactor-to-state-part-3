@@ -42,6 +42,8 @@ ul {
 }
 
 .secondNav li{
+  font-weight: bold;
+  font-size: 14px;
   padding: 10px;
 }
 
@@ -58,30 +60,6 @@ ul {
 
 .shot img {
   width: 100%;
-}
-
-.shots__stats {
-  color: #aaa;
-  font-size: 11px;
-}
-
-.shots__list {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.shots__list li {
-  margin-left: 5px;
-}
-
-.shots__list i {
-  margin-right: 5px;
-}
-
-.author{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
 }
 
 .link {

@@ -3,6 +3,7 @@ import Header from './data/header.js'
 import Shots from './data/Shots.js'
 import './App.css'
 
+
 import { name, year } from './data/author.js'
 
 const styles = {
