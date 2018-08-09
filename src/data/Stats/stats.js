@@ -21,7 +21,7 @@ class Stats extends React.Component {
       this.setState({
         likes: parseInt(this.state.likes)+1
       });
-      theStyle= {color: '#00a'};
+      theStyle= {color: '#a00'};
       this.state.counterClicks++;
     } else {
       this.setState({
@@ -30,15 +30,9 @@ class Stats extends React.Component {
       theStyle= {color: '#aaa'};
       this.state.counterClicks--;
     }
-
-
-
   }
 
   render() {
-
-
-
     return (
 
       <div className='shots__stats'>
